@@ -1,0 +1,345 @@
+﻿<Window x:Class="Hotel_Armani2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_Armani2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"     
+        mc:Ignorable="d"
+        Title="Window2" Height="500" Width="800">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.92*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="HotelPlan" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Source="C:\All sthukes\Курсач\bf83e40e52cc41b0ae127d7b9ca2a3e22.jpg" OpacityMask="Black"/>
+        <Image x:Name="Lux1" Grid.Column="1" Grid.Row="0" Source="C:\All sthukes\Курсач\Lux1.png" HorizontalAlignment="Right" MouseEnter="Lux1_MouseEnter" MouseLeave="Lux1_MouseLeave" MouseDown="Lux1_MouseDown"/>
+        <Image x:Name="Lux2" Grid.Column="2" Grid.Row="0" Source="C:\All sthukes\Курсач\Lux1.png" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" MouseEnter="Lux2_MouseEnter" MouseLeave="Lux2_MouseLeave">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.55*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.15*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.45*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Polygon Grid.Column="1" Grid.Row="1" x:Name="F2" Points="0,0 0,60 30,106 150,40 20,-25 0,0" Margin="0,0,-124,0" Grid.ColumnSpan="2">
+                <Polygon.Fill>
+                    <ImageBrush x:Name="D2" ImageSource="C:\Users\Igor\Pictures\566.png" Stretch="UniformToFill" Viewbox="0.1,-0.15,1,1">
+                        <ImageBrush.Transform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.90" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.Transform>
+                    </ImageBrush>
+                </Polygon.Fill>
+            </Polygon>
+        </Grid>
+
+        <Grid x:Name="InfoR" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="SlidesR" Grid.Column="1" Grid.Row="1"></Image>
+            <TextBlock x:Name="TextR" Grid.Column="1" Grid.Row="2"></TextBlock>
+            <Grid x:Name="IconsInfo" Grid.Column="1" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Column="0" Grid.Row="0">
+                    <materialDesign:PackIcon x:Name="P1" Kind="HumanHandsdown" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="0">
+                    <materialDesign:PackIcon x:Name="P2" Kind="HumanHandsdown" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="2" Grid.Row="0">
+                    <materialDesign:PackIcon x:Name="P3" Kind="HumanHandsdown" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="3" Grid.Row="0">
+                    <materialDesign:PackIcon x:Name="P4" Kind="HumanHandsdown" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="4" Grid.Row="0">
+                    <materialDesign:PackIcon x:Name="P5" Kind="HumanHandsdown" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                
+                
+                <Viewbox Grid.Column="0" Grid.Row="1">
+                    <materialDesign:PackIcon x:Name="Be1" Kind="Bed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="1">
+                    <materialDesign:PackIcon x:Name="Be2" Kind="Bed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="2" Grid.Row="1">
+                    <materialDesign:PackIcon x:Name="Be3" Kind="Bed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="3" Grid.Row="1">
+                    <materialDesign:PackIcon x:Name="Be4" Kind="Bed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="4" Grid.Row="1">
+                    <materialDesign:PackIcon x:Name="Be5" Kind="Bed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+
+                <Viewbox Grid.Column="0" Grid.Row="2">
+                    <materialDesign:PackIcon x:Name="R1" Kind="DoorClosed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="2">
+                    <materialDesign:PackIcon x:Name="R2" Kind="DoorClosed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="2" Grid.Row="2">
+                    <materialDesign:PackIcon x:Name="R3" Kind="DoorClosed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="3" Grid.Row="2">
+                    <materialDesign:PackIcon x:Name="R4" Kind="DoorClosed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+                <Viewbox Grid.Column="4" Grid.Row="2">
+                    <materialDesign:PackIcon x:Name="R5" Kind="DoorClosed" Foreground="Black" VerticalAlignment="Center" Opacity="0"/>
+                </Viewbox>
+            </Grid>
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.039*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.34*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="C1" Grid.Column="0" Grid.Row="0" Source="C:\All sthukes\Курсач\C1.png" HorizontalAlignment="Right" MouseEnter="C1_MouseEnter" MouseLeave="C1_MouseLeave"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.03*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.34*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="C2" Grid.Column="1" Grid.Row="0" Source="C:\All sthukes\Курсач\C1.png" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" MouseEnter="C2_MouseEnter" MouseLeave="C2_MouseLeave">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+        <!--- -->
+        <!--- -->
+        <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.03*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Right" >
+                <Polygon  Points="-80,0,100,100,100,0" Height="68" Width="57" Opacity="1" HorizontalAlignment="Right" MouseEnter="B1_MouseEnter" MouseLeave="B1_MouseLeave">
+                    <Polygon.Fill >
+                        <ImageBrush x:Name="B1" ImageSource="C:\Users\Igor\Pictures\565.png" Stretch="Uniform" Viewbox="0,0,0,1.6"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Viewbox>
+
+        </Grid>
+        <!--- -->
+        <Grid Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.03*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Left">
+                <Polygon  Points="-80,0,100,100,100,0" Height="68" Width="57" Opacity="1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="-47,0,0,0" MouseEnter="B2_MouseEnter" MouseLeave="B2_MouseLeave">
+                    <Polygon.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Polygon.RenderTransform>
+                    <Polygon.Fill >
+                        <ImageBrush x:Name="B2" ImageSource="C:\Users\Igor\Pictures\565.png" Stretch="Uniform" Viewbox="0,0,0,1.6"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Viewbox>
+
+        </Grid>
+        
+        <Grid Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.55*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.15*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.45*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Polygon Grid.Column="1" Grid.Row="1" x:Name="F1" Points="0,0 0,60 30,106 150,40 20,-25 0,0" Margin="0,0,-124,0" Grid.ColumnSpan="2" >
+                <Polygon.Fill>
+                    <ImageBrush x:Name="D1" ImageSource="C:\Users\Igor\Pictures\566.png" Stretch="UniformToFill" Viewbox="0.1,-0.15,1,1">
+                        <ImageBrush.Transform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.90" ScaleY="0.95"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.Transform>
+                    </ImageBrush>
+                </Polygon.Fill>
+            </Polygon>
+        </Grid>
+        <!--- -->
+        <Grid x:Name="Profile" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="5" Margin="350,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="BackGroundSlide" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Background="#E5000000"/>
+          
+            <Image x:Name="ProgileTheme" Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" Stretch="UniformToFill" Source="C:\Users\Igor\Pictures\Theme1.jpg"/>
+            <Grid x:Name="ProfileInfo" Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" Opacity="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse x:Name="IImage" StrokeThickness="10" StrokeDashCap="Round" Stroke="Gray"  Grid.Column="1" Grid.Row="1" Margin="0,8,0,3" Grid.RowSpan="2">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="asas" ImageSource="C:\Users\Igor\source\repos\p33\p33\Image\2.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Grid x:Name="Info" Grid.Column="1" Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+                        <TextBlock x:Name="Name"  Text="Name" Foreground="White"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
+                        
+                        
+
+                        <TextBlock x:Name="Phone"  Text="0951543318" Foreground="White"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+            <Viewbox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
+                <Polygon Fill="#E5000000" Points="-200,1000,50,0,50,2000" MouseDown="Polygon_MouseDown"/>
+            </Viewbox>
+        </Grid>
+        <Grid x:Name="LeftMenu" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="5">
+                <Image Source="C:\Users\Igor\Pictures\Theme1.jpg" Stretch="UniformToFill"/>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="5" Background="Black" Opacity="0.9"/>
+        </Grid>
+       
+       
+    </Grid>
+</Window>

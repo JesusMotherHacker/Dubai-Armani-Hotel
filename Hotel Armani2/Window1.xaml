@@ -1,0 +1,173 @@
+﻿<Window x:Class="Hotel_Armani2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_Armani2"
+        mc:Ignorable="d"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"     
+        Title="Window1" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+       
+        <Image x:Name="Background" Grid.Row="0" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="6" Source="C:\All sthukes\Курсач\G2.jpg" Stretch="UniformToFill"></Image>
+
+        <Image x:Name="MainTheme" Grid.Row="0" Grid.RowSpan="6" Grid.Column="5" Source="C:\Users\Igor\Pictures\Theme1.jpg" Stretch="UniformToFill"></Image>
+        <Grid x:Name="ChooseTheme" Grid.Row="0" Grid.RowSpan="6" Grid.Column="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.45*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.45*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="CTBack" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="#B2000000" IsEnabled="False" Opacity="0"/>
+            <Ellipse x:Name="Theme1" Grid.Column="1" Grid.Row="1" IsEnabled="False" Opacity="0" MouseDown="Theme1_MouseDown">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="C:\Users\Igor\Pictures\Theme3.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="Theme2" Grid.Column="1" Grid.Row="2" Opacity="0" IsEnabled="False" MouseDown="Theme2_MouseDown">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="C:\Users\Igor\Pictures\Theme2.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="Theme3" Grid.Column="1" Grid.Row="3" IsEnabled="False" Opacity="0" MouseDown="Theme3_MouseDown">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="C:\Users\Igor\Pictures\Theme1.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+        <Grid x:Name="Interface" Grid.Column="5" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <materialDesign:PackIcon x:Name="Ques" Kind="QuestionMarkCircle" Foreground="#FEEEEEEE" VerticalAlignment="Center" />
+            </Viewbox>
+            <Viewbox Grid.Column="2" Grid.Row="0">
+                <materialDesign:PackIcon x:Name="Lanf" Kind="Language" Foreground="#FEEEEEEE" VerticalAlignment="Center" />
+            </Viewbox> 
+            <Ellipse x:Name="IThemeMini" Grid.Row="0" Grid.Column="0" MouseDown="IThemeMini_MouseDown">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="file:///C:/Users/Igor/Pictures/Theme1.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+
+
+        <Grid x:Name="MoreInfo" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="Name" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="Name" TextAlignment="Center" Background="#AAFAFFFF" FontSize="35" PreviewTextInput="Name_PreviewTextInput"/>
+            <TextBox x:Name="SurName" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Text="Surname" TextAlignment="Center" Background="#AAFAFFFF" FontSize="35" PreviewTextInput="SurName_PreviewTextInput"/>
+            <TextBox x:Name="Phone" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" Text="Phone" TextAlignment="Center" Background="#AAFAFFFF" FontSize="35" PreviewTextInput="Phone_PreviewTextInput"/>
+        </Grid>
+        <Grid x:Name="Image" Grid.Column="5" Grid.Row="1" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.15*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.17*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.17*"/>
+            </Grid.ColumnDefinitions>
+            <Ellipse x:Name="IImage" StrokeThickness="10" StrokeDashCap="Round" Stroke="Gray"  Grid.Column="1" Grid.Row="1" MouseDown="IImage_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="asas" ImageSource="C:\Users\Igor\source\repos\p33\p33\Image\2.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+        </Grid>
+        <Grid x:Name="IntefaceText" Grid.Column="5" Grid.Row="3" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.17*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.17*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                <TextBlock x:Name="IName" Text="Name" Foreground="White"/>
+            </Viewbox>
+            <Viewbox  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                <TextBlock x:Name="IPhone" Text="0950000000" Foreground="White"/>
+            </Viewbox>
+            <!--  <Viewbox  Grid.Row="5" Grid.Column="1">
+                <TextBlock x:Name="ITheme" Text="Choose Theme: " Foreground="White"/>
+            </Viewbox>-->
+        </Grid>
+        <Grid x:Name="BuyB" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
+                <Button Content="    Complete    " MouseDown="Button_MouseDown" FontSize="18" Background="#AAFAFFFF" Foreground="Black" Click="Button_Click"></Button>
+            </Viewbox>
+        </Grid>
+        <Viewbox Grid.Column="3" Grid.Row="1">
+            <materialDesign:PackIcon x:Name="A11" Kind="Person" Foreground="Black" VerticalAlignment="Center" Margin="-5,8,0,0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="2">
+            <materialDesign:PackIcon x:Name="A12" Kind="Done" Foreground="Black" VerticalAlignment="Center" Margin="-5,8,0,0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="3">
+            <materialDesign:PackIcon x:Name="A13" Kind="SmartphoneAndroid" Foreground="Black" VerticalAlignment="Center" Margin="-5,8,0,0"/>
+        </Viewbox>
+    </Grid>
+</Window>
